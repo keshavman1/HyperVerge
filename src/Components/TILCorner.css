@@ -1,0 +1,18 @@
+/* src/TILCorner.css */
+.tilcorner-container {
+    background-color: #2196f3; /* Blue background */
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .tilcorner-container:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+  }
+  
+  .tilcorner-container p {
+    margin: 0;
+  }
+  

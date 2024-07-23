@@ -4,6 +4,7 @@ import GoogleSlides from './Components/GoogleSlides';
 import PomodoroTimer from './Components/PomodoroTimer';
 import GoogleSpreadsheet from './Components/GoogleSpreadsheet';
 import Leaderboard from './Components/Leaderboard';
+import TILCorner from './Components/TILcorner';
 import './styles.css';
 
 const App = () => {
@@ -20,6 +21,9 @@ const App = () => {
       </div>
       <div className="widget-container">
         <Leaderboard />
+      </div>
+      <div className="widget-container">
+        <TILCorner />
       </div>
     </div>
   );
