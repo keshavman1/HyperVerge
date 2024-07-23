@@ -5,6 +5,7 @@ import PomodoroTimer from './Components/PomodoroTimer';
 import GoogleSpreadsheet from './Components/GoogleSpreadsheet';
 import Leaderboard from './Components/Leaderboard';
 import TILCorner from './Components/TILcorner';
+import GoogleForm from './Components/GoogleForm';
 import './styles.css';
 
 const App = () => {
@@ -24,6 +25,9 @@ const App = () => {
       </div>
       <div className="widget-container">
         <TILCorner />
+      </div>
+      <div className="widget-container">
+        <GoogleForm />
       </div>
     </div>
   );
