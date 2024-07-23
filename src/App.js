@@ -3,6 +3,7 @@ import React from 'react';
 import GoogleSlides from './Components/GoogleSlides';
 import PomodoroTimer from './Components/PomodoroTimer';
 import GoogleSpreadsheet from './Components/GoogleSpreadsheet';
+import Leaderboard from './Components/Leaderboard';
 import './styles.css';
 
 const App = () => {
@@ -17,7 +18,9 @@ const App = () => {
       <div className="widget-container">
         <GoogleSpreadsheet />
       </div>
-      {/* Add more widgets here */}
+      <div className="widget-container">
+        <Leaderboard />
+      </div>
     </div>
   );
 };

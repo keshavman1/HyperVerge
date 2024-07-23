@@ -62,3 +62,30 @@ button:hover {
   font-size: 2rem; /* Larger font size for timer display */
   margin-bottom: 10px;
 }
+
+
+
+#notice-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+.widget-container {
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+  margin: 10px;
+  background-color: #ffffff; /* White background for widgets */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.widget-container:hover {
+  background-color: #e0e0e0; /* Light gray background on hover */
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
