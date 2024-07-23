@@ -1,8 +1,8 @@
-// src/App.js
+
 import React from 'react';
 import GoogleSlides from './Components/GoogleSlides';
 import PomodoroTimer from './Components/PomodoroTimer';
-import './styles.css'; // Ensure this path is correct
+import './styles.css';
 
 const App = () => {
   return (
