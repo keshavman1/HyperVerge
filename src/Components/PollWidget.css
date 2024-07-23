@@ -1,0 +1,45 @@
+/* src/styles/PollWidget.css */
+.poll-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.poll-option {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.poll-option button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #44a4d7;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+.poll-results {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.poll-progress {
+    height: 20px;
+    background-color: #9cd0f1;
+    transition: width 0.3s ease;
+}
+
+.poll-results span {
+    margin-left: 10px;
+}

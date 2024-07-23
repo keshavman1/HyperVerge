@@ -11,6 +11,7 @@ import './styles.css';
 import GoogleKeep from './Components/GoogleKeep';
 import GoogleForm from './Components/GoogleForm';
 import MusicWidget from './Components/MusicWidget';
+import PollWidget from './Components/PollWidget';
 
 const App = () => {
   return (
@@ -44,6 +45,9 @@ const App = () => {
         </div>
         <div className="widget-container">
         <MusicWidget />
+        </div>
+        <div className="widget-container">
+        <PollWidget />
         </div>
       </div>
     
