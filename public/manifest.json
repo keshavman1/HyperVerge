@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Digital Notice Board",
+  "version": "1.0",
+  "description": "A digital notice board with various widgets.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://docs.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
