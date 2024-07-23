@@ -10,6 +10,7 @@ import GoogleCalendarDayView from './Components/GoogleCalendarDayView';
 import './styles.css';
 import GoogleKeep from './Components/GoogleKeep';
 import GoogleForm from './Components/GoogleForm';
+import MusicWidget from './Components/MusicWidget';
 
 const App = () => {
   return (
@@ -40,7 +41,10 @@ const App = () => {
         </div>
         <div className="widget-container">
         <GoogleForm />
-      </div>
+        </div>
+        <div className="widget-container">
+        <MusicWidget />
+        </div>
       </div>
     
   );

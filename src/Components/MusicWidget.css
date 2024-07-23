@@ -1,0 +1,16 @@
+/* src/Components/MusicWidget.css */
+
+.widget {
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
