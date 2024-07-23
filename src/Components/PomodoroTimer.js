@@ -1,8 +1,8 @@
-// src/components/PomodoroTimer.js
+
 import React, { useState, useEffect } from 'react';
 
 const PomodoroTimer = () => {
-  const [time, setTime] = useState(25 * 60); // 25 minutes
+  const [time, setTime] = useState(25 * 60); 
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const PomodoroTimer = () => {
 
   const resetTimer = () => {
     setIsActive(false);
-    setTime(25 * 60); // Reset to 25 minutes
+    setTime(25 * 60); 
   };
 
   const minutes = Math.floor(time / 60);
