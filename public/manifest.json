@@ -3,24 +3,20 @@
   "name": "Digital Notice Board",
   "version": "1.0",
   "description": "A digital notice board with various widgets.",
-  "action": {
-    "default_popup": "index.html"
-  },
-  "background": {
-    "service_worker": "background.js"
+  "chrome_url_overrides": {
+    "newtab": "index.html"
   },
   "permissions": [
     "storage",
-    "activeTab",
-    "scripting"
+    "activeTab"
   ],
-  "host_permissions": [
-    "https://docs.google.com/*"
-  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
-    }
-  ]
+}
+]
 }
