@@ -1,0 +1,64 @@
+.announcements-container {
+  background: #f4c2c2; /* White background for the widget */
+  border: 1px solid #cbd5e1; /* Light gray border */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  padding: 20px;
+  box-sizing: border-box;
+  height: 250px; /* Adjust height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: relative;
+  font-family: "Arial", sans-serif; /* Font family */
+}
+
+.announcements-header {
+  font-size: 1.6rem; /* Header font size */
+  color: #ffffff; /* White color for header text */
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #4a90e2,
+    #50e3c2
+  ); /* Gradient background for header */
+  padding: 12px;
+  border-radius: 10px; /* Rounded corners for header */
+}
+
+.scrolling-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-item {
+  margin-bottom: 15px; /* Space between announcements */
+  padding: 12px;
+  border-radius: 10px;
+  background: #f7f7f7; /* Light gray background for each item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for items */
+  transition: background-color 0.3s, transform 0.3s;
+  color: #333; /* Dark text color for readability */
+}
+
+.announcement-item:hover {
+  background-color: #e2e6ea; /* Light blue background on hover */
+  transform: scale(1.03); /* Slightly scale up on hover */
+}
+
+.announcements-container::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.announcements-container::-webkit-scrollbar-track {
+  background: #f5f5f5; /* Track background */
+}
+
+.announcements-container::-webkit-scrollbar-thumb {
+  background: #4e4a4a; /* Thumb color */
+  border-radius: 10px; /* Rounded corners for thumb */
+}
+
+.announcements-container::-webkit-scrollbar-thumb:hover {
+  background: #357abd; /* Darker thumb color on hover */
+}
