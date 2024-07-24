@@ -14,6 +14,7 @@ import MusicWidget from "./Components/MusicWidget";
 import PollWidget from "./Components/PollWidget";
 import Announcements from "./Components/announcements";
 import StepsHealthTracker from "./Components/StepsHealthTracker";
+import DailyGrowthChecklist from "./Components/DailyGrowthChecklist";
 
 const App = () => {
   return (
@@ -56,6 +57,9 @@ const App = () => {
       </div>
       <div className="widget-container">
         <StepsHealthTracker />
+      </div>
+      <div className="widget-container">
+        <DailyGrowthChecklist />
       </div>
     </div>
   );
