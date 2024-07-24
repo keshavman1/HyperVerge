@@ -16,6 +16,8 @@ import Announcements from "./Components/announcements";
 import StepsHealthTracker from "./Components/StepsHealthTracker";
 import DailyGrowthChecklist from "./Components/DailyGrowthChecklist";
 import OpportunityBoard from "./Components/OpportunityBoard";
+import NotionWidget from './Components/NotionWidget';
+
 
 const App = () => {
   return (
@@ -64,6 +66,9 @@ const App = () => {
       </div>
       <div className="widget-container">
         <OpportunityBoard />
+      </div>
+      <div className="widget-container">
+        <NotionWidget /> 
       </div>
     </div>
   );
