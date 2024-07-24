@@ -15,6 +15,7 @@ import PollWidget from "./Components/PollWidget";
 import Announcements from "./Components/announcements";
 import StepsHealthTracker from "./Components/StepsHealthTracker";
 import DailyGrowthChecklist from "./Components/DailyGrowthChecklist";
+import OpportunityBoard from "./Components/OpportunityBoard";
 
 const App = () => {
   return (
@@ -60,6 +61,9 @@ const App = () => {
       </div>
       <div className="widget-container">
         <DailyGrowthChecklist />
+      </div>
+      <div className="widget-container">
+        <OpportunityBoard />
       </div>
     </div>
   );
