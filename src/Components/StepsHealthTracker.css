@@ -1,0 +1,61 @@
+/* src/Components/StepsHealthTracker.css */
+
+.steps-health-tracker {
+  padding: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.steps-health-tracker h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #000000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.steps-health-tracker label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.steps-health-tracker input[type="number"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.steps-health-tracker progress {
+  width: 100%;
+  height: 25px;
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.steps-health-tracker progress::-webkit-progress-bar {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.steps-health-tracker progress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+.steps-health-tracker progress::-moz-progress-bar {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+.steps-health-tracker div {
+  font-size: 1.2em;
+  font-weight: bold;
+}

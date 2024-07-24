@@ -13,6 +13,7 @@ import GoogleForm from "./Components/GoogleForm";
 import MusicWidget from "./Components/MusicWidget";
 import PollWidget from "./Components/PollWidget";
 import Announcements from "./Components/announcements";
+import StepsHealthTracker from "./Components/StepsHealthTracker";
 
 const App = () => {
   return (
@@ -52,6 +53,9 @@ const App = () => {
       </div>
       <div className="widget-container">
         <Announcements />
+      </div>
+      <div className="widget-container">
+        <StepsHealthTracker />
       </div>
     </div>
   );
