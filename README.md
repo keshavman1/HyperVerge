@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+Digital Notice Board Chrome Extension
+This project is a Chrome extension that serves as a digital notice board, integrating various widgets to enhance functionality and user experience. The extension is built using React and provides features like Google Slides integration, a Pomodoro Timer, and more.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Features
+Widgets
+Installation
+Usage
 
-## Available Scripts
+Features:
+Google Slides Integration: Display Google Slides presentations within the extension.
+Pomodoro Timer: A customizable Pomodoro Timer to enhance productivity.
+Dynamic Theme Switching: Automatically adjust text color and styles based on light/dark theme.
+Responsive Design: Widgets are designed to be responsive and user-friendly.
 
-In the project directory, you can run:
 
-### `npm start`
+Installation
+Follow these steps to set up and run the project locally.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Prerequisites:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Node.js and npm installed on your machine.
+Chrome browser installed.
 
-### `npm test`
+Steps:
+Clone the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone https://github.com/your-username/digital-notice-board.git
+cd digital-notice-board
 
-### `npm run build`
+Install Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
+npm install react-tsparticles
+npm install react-toggle-dark-mode
+npm install react-spring
+npm install @mui/material @emotion/react @emotion/styled
+npm install axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Build the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm run build
+Load the Extension in Chrome
 
-### `npm run eject`
+Open Chrome and go to chrome://extensions/.
+Enable "Developer mode" by toggling the switch in the top right.
+Click on "Load unpacked" and select the build folder from your project directory.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the Development Server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm run build 
+Add as Google Chrome Extension and run it ..
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+HAPPY CODING!
