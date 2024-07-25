@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import WidgetSlider from "./Components/WidgetSlider";
+import Loading from "./Components/Loading";
 import "./styles.css";
 
 const App = () => {
@@ -22,12 +23,28 @@ const App = () => {
     notionWidget: true,
   });
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadContent = async () => {
+      // Simulate a delay for loading. Adjust as needed.
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      setIsLoading(false);
+    };
+
+    loadContent();
+  }, []);
+
   const toggleWidgetVisibility = (widgetName) => {
     setWidgetVisibility({
       ...widgetVisibility,
       [widgetName]: !widgetVisibility[widgetName],
     });
   };
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div id="notice-board">
