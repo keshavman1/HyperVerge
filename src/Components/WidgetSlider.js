@@ -1,4 +1,3 @@
-// Components/WidgetSlider.jsx
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -35,7 +34,8 @@ const WidgetSlider = ({ widgetVisibility }) => {
                 grabCursor={true}
                 centeredSlides={true}
                 loop={true}
-                slidesPerView={'auto'}
+                slidesPerView={3} // Show 3 slides at once
+                spaceBetween={20} // Space between slides
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
@@ -49,6 +49,23 @@ const WidgetSlider = ({ widgetVisibility }) => {
                     clickable: true,
                 }}
                 modules={[EffectCoverflow, Pagination, Navigation]}
+                breakpoints={{
+                    // When window width is >= 768px
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    // When window width is >= 640px
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    // When window width is < 640px
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                }}
                 className="swiper_container"
             >
                 {widgetVisibility.googleSlides && <SwiperSlide><GoogleSlides /></SwiperSlide>}

@@ -1,3 +1,4 @@
+/* Basic resets and root variables */
 *,
 *::before,
 *::after {
@@ -134,7 +135,7 @@ html, body {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
-  height: 100px; /* Reduced height for uniform size */
+  /* height: 100px; Reduced height for uniform size */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,7 +149,7 @@ html, body {
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background: #797979;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -177,34 +178,22 @@ body {
 }
 
 .swiper_container {
-  height: 40rem; /* Reduced height */
+  height: 60rem; /* Reduced height */
   padding: 2rem 0;
   position: relative;
 }
 
 .swiper-slide {
-  width: 37rem;
-  height: 42rem;
-  position: relative;
-}
-
-@media (max-width: 500px) {
-  .swiper_container {
-    height: 60rem; /* Reduced height for small screens */
-  }
-  .swiper-slide {
-    width: 28rem !important;
-    height: 32rem !important;
-  }
-  .swiper-slide img {
-    width: 28rem !important;
-    height: 32rem !important;
-  }
+  width: 100%; /* Ensure each slide takes up the full width of the swiper */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure slides are of equal height */
 }
 
 .swiper-slide img {
-  width: 37rem;
-  height: 40rem;
+  width: 100%; /* Make images responsive */
+  height: auto; /* Keep the aspect ratio */
   border-radius: 2rem;
   object-fit: cover;
 }
