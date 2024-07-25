@@ -73,17 +73,17 @@ const WidgetSlider = () => {
                 <SwiperSlide><GoogleSpreadsheet /></SwiperSlide>
                 <SwiperSlide><Leaderboard /></SwiperSlide>
                 <SwiperSlide><TILCorner /></SwiperSlide>
-                <SwiperSlide><GoogleMeet /></SwiperSlide>
                 <SwiperSlide><GoogleCalendarDayView /></SwiperSlide>
                 <SwiperSlide><GoogleKeep /></SwiperSlide>
+                <SwiperSlide><NotionWidget /></SwiperSlide>
                 <SwiperSlide><GoogleForm /></SwiperSlide>
-                <SwiperSlide><MusicWidget /></SwiperSlide>
+                <SwiperSlide><GoogleMeet /></SwiperSlide>
                 <SwiperSlide><PollWidget /></SwiperSlide>
                 <SwiperSlide><Announcements /></SwiperSlide>
                 <SwiperSlide><StepsHealthTracker /></SwiperSlide>
                 <SwiperSlide><DailyGrowthChecklist /></SwiperSlide>
                 <SwiperSlide><OpportunityBoard /></SwiperSlide>
-                <SwiperSlide><NotionWidget /></SwiperSlide>
+                <SwiperSlide><MusicWidget /></SwiperSlide>
                 <div className="slider-controler">
                     <div className="swiper-button-prev slider-arrow">
                         <ion-icon name="arrow-back-outline"></ion-icon>

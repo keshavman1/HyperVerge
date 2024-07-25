@@ -85,11 +85,15 @@ body {
   position: relative; /* Ensure positioning is relative for the theme toggle */
 }
 
+/* Centering the Slider Container */
 .slider-container {
   flex: 1; /* Takes up remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg);
+  padding: 20px;
+  transition: background-color 0.3s ease;
 }
 
 /* Dark Mode Toggle Button */
@@ -172,14 +176,16 @@ body {
   box-sizing: border-box;
   padding: 20px;
   transition: background-color 0.3s ease;
+  width: 100%; /* Ensure it takes full width */
+  max-width: 1200px; /* Optional: limits the maximum width */
+  margin: 0 auto; /* Center the slider horizontally */
 }
 
 .slider-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid with larger min width */
+  gap: 20px; /* Increase gap between items */
   width: 100%;
-  max-width: 1200px; /* Optional: limits the maximum width */
   box-sizing: border-box;
 }
 
@@ -193,12 +199,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem; /* Adjusted font size for better readability */
+  font-size: 1.6rem; /* Increased font size for better readability */
 }
 
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: 1.3rem;
+  width: 1.5rem; /* Increased width for better visibility */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -220,6 +226,8 @@ body {
   height: 60rem; /* Reduced height */
   padding: 2rem 0;
   position: relative;
+  display: flex;
+  justify-content: center; /* Center swiper container horizontally */
 }
 
 .swiper-slide {
