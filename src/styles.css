@@ -9,9 +9,13 @@
 }
 
 :root {
-  --primary: #6a59ff;
+  --primary-light: #6a59ff;
+  --primary-dark: #90caf9;
   --white: #ffffff;
-  --bg: #f5f5f5;
+  --bg-light: #f5f5f5;
+  --bg-dark: #121212;
+  --text-light: #000000;
+  --text-dark: #ffffff;
 }
 
 html {
@@ -41,48 +45,98 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: visible; /* Prevents scrolling */
+  overflow: hidden; /* Prevents scrolling */
 }
 
+body {
+  font-size: 1.6rem;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default (Light) Theme */
+:root {
+  --primary: #6a59ff;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+  --text-color: #000000; /* Default text color for light mode */
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --primary: #6a59ff;
+  --white: #ffffff;
+  --bg: #1e1e1e; /* Background color for dark mode */
+  --text-color: #ffffff; /* Text color for dark mode */
+}
+
+/* Body in both themes */
+body {
+  background: var(--bg);
+  color: var(--text-color); /* Use the text color variable */
+}
+
+/* Notice Board Styles */
 #notice-board {
   display: flex;
   flex-direction: column;
   height: 100vh; /* Full viewport height */
+  position: relative; /* Ensure positioning is relative for the theme toggle */
 }
 
+.slider-container {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Widget Suite Heading */
+.widget-suite-heading {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 2.4rem; /* Adjust font size as needed */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  margin-bottom: 20px; /* Space below heading */
+  text-align: center; /* Center the heading */
+}
+
+.widget-suite-heading:hover {
+  color: var(--primary-light); /* Lighter color on hover */
+}
+
+/* Widget Controls */
 .widget-controls {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center-aligns the controls horizontally */
   align-items: center;
   padding: 20px;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #ddd;
-  flex: 0 0 auto; /* Prevents it from growing or shrinking */
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--text-color); /* Border color changes based on theme */
   box-sizing: border-box;
-  margin-bottom: 20px; /* Space between widget controls and slider */
-}
-
-.widget-controls h2 {
-  flex-basis: 100%;
-  text-align: center;
-  margin: 0 0 20px 0;
-  color: #333;
-  font-size: 2.4rem;
-  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .widget-controls button {
   box-shadow: none;
   text-transform: none;
-  font-size: 12px;
+  font-size: 1.2rem;
   padding: 10px 12px;
-  border: 1px solid #0063cc;
-  line-height: 1.5;
-  background-color: #0063cc;
-  border-color: #0063cc;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 5px;
   border-radius: 8px;
   cursor: pointer;
@@ -91,15 +145,15 @@ html, body {
 }
 
 .widget-controls button:hover {
-  background-color: #0056b3;
-  border-color: #004080;
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  transform: scale(1.1);
 }
 
 .widget-controls button:active {
-  background-color: #004080;
-  border-color: #003366;
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
   box-shadow: none;
 }
 
@@ -108,15 +162,16 @@ html, body {
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
 
+/* Slider Styles */
 .WidgetSlider {
   flex: 1; /* Takes up remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--bg);
   box-sizing: border-box;
   padding: 20px;
-  margin-top: -10px; /* Move slider up */
+  transition: background-color 0.3s ease;
 }
 
 .slider-grid {
@@ -129,54 +184,38 @@ html, body {
 }
 
 .slider-item {
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: var(--bg-light);
+  border: 1px solid var(--text-color);
   border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
-  /* height: 100px; Reduced height for uniform size */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 1.4rem; /* Adjusted font size for better readability */
 }
 
+/* Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 1.3rem;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
-  background: #797979;
+  background: var(--text-color);
   transition: all 1s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #222224;
+  background: var(--primary-light);
 }
 
 ::-webkit-scrollbar-track {
-  background: #f9f9f9;
-}
-
-body {
-  font-size: 1.6rem;
   background: var(--bg);
 }
 
-.container {
-  max-width: 124rem;
-  padding: 4rem 1rem;
-  margin: 0 auto;
-}
-
-.heading {
-  padding: 1rem 0;
-  font-size: 3.5rem;
-  text-align: center;
-}
-
+/* Swiper Styles */
 .swiper_container {
   height: 60rem; /* Reduced height */
   padding: 2rem 0;
@@ -256,7 +295,7 @@ body {
 
 .slider-controler .slider-arrow ion-icon {
   font-size: 2rem;
-  color: #222224;
+  color: var(--text-color);
 }
 
 .slider-controler .slider-arrow::after {
@@ -274,5 +313,5 @@ body {
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--primary);
+  background: var(--primary-light);
 }

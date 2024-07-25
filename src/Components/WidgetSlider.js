@@ -26,7 +26,7 @@ import DailyGrowthChecklist from './DailyGrowthChecklist';
 import OpportunityBoard from './OpportunityBoard';
 import NotionWidget from './NotionWidget';
 
-const WidgetSlider = ({ widgetVisibility }) => {
+const WidgetSlider = () => {
     return (
         <div className="swiper_container">
             <Swiper
@@ -68,22 +68,22 @@ const WidgetSlider = ({ widgetVisibility }) => {
                 }}
                 className="swiper_container"
             >
-                {widgetVisibility.googleSlides && <SwiperSlide><GoogleSlides /></SwiperSlide>}
-                {widgetVisibility.pomodoroTimer && <SwiperSlide><PomodoroTimer /></SwiperSlide>}
-                {widgetVisibility.googleSpreadsheet && <SwiperSlide><GoogleSpreadsheet /></SwiperSlide>}
-                {widgetVisibility.leaderboard && <SwiperSlide><Leaderboard /></SwiperSlide>}
-                {widgetVisibility.tilCorner && <SwiperSlide><TILCorner /></SwiperSlide>}
-                {widgetVisibility.googleMeet && <SwiperSlide><GoogleMeet /></SwiperSlide>}
-                {widgetVisibility.googleCalendarDayView && <SwiperSlide><GoogleCalendarDayView /></SwiperSlide>}
-                {widgetVisibility.googleKeep && <SwiperSlide><GoogleKeep /></SwiperSlide>}
-                {widgetVisibility.googleForm && <SwiperSlide><GoogleForm /></SwiperSlide>}
-                {widgetVisibility.musicWidget && <SwiperSlide><MusicWidget /></SwiperSlide>}
-                {widgetVisibility.pollWidget && <SwiperSlide><PollWidget /></SwiperSlide>}
-                {widgetVisibility.announcements && <SwiperSlide><Announcements /></SwiperSlide>}
-                {widgetVisibility.stepsHealthTracker && <SwiperSlide><StepsHealthTracker /></SwiperSlide>}
-                {widgetVisibility.dailyGrowthChecklist && <SwiperSlide><DailyGrowthChecklist /></SwiperSlide>}
-                {widgetVisibility.opportunityBoard && <SwiperSlide><OpportunityBoard /></SwiperSlide>}
-                {widgetVisibility.notionWidget && <SwiperSlide><NotionWidget /></SwiperSlide>}
+                <SwiperSlide><GoogleSlides /></SwiperSlide>
+                <SwiperSlide><PomodoroTimer /></SwiperSlide>
+                <SwiperSlide><GoogleSpreadsheet /></SwiperSlide>
+                <SwiperSlide><Leaderboard /></SwiperSlide>
+                <SwiperSlide><TILCorner /></SwiperSlide>
+                <SwiperSlide><GoogleMeet /></SwiperSlide>
+                <SwiperSlide><GoogleCalendarDayView /></SwiperSlide>
+                <SwiperSlide><GoogleKeep /></SwiperSlide>
+                <SwiperSlide><GoogleForm /></SwiperSlide>
+                <SwiperSlide><MusicWidget /></SwiperSlide>
+                <SwiperSlide><PollWidget /></SwiperSlide>
+                <SwiperSlide><Announcements /></SwiperSlide>
+                <SwiperSlide><StepsHealthTracker /></SwiperSlide>
+                <SwiperSlide><DailyGrowthChecklist /></SwiperSlide>
+                <SwiperSlide><OpportunityBoard /></SwiperSlide>
+                <SwiperSlide><NotionWidget /></SwiperSlide>
                 <div className="slider-controler">
                     <div className="swiper-button-prev slider-arrow">
                         <ion-icon name="arrow-back-outline"></ion-icon>

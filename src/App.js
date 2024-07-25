@@ -1,29 +1,14 @@
 import React, { useState, useEffect } from "react";
 import WidgetSlider from "./Components/WidgetSlider";
 import Loading from "./Components/Loading";
+import { DarkModeSwitch } from "./Components/DarkModeSwitch"; // Update this path based on the actual location
 import "./styles.css";
 
 const App = () => {
-  const [widgetVisibility, setWidgetVisibility] = useState({
-    googleSlides: true,
-    pomodoroTimer: true,
-    googleSpreadsheet: true,
-    leaderboard: true,
-    tilCorner: true,
-    googleMeet: true,
-    googleCalendarDayView: true,
-    googleKeep: true,
-    googleForm: true,
-    musicWidget: true,
-    pollWidget: true,
-    announcements: true,
-    stepsHealthTracker: true,
-    dailyGrowthChecklist: true,
-    opportunityBoard: true,
-    notionWidget: true,
-  });
-
   const [isLoading, setIsLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
 
   useEffect(() => {
     const loadContent = async () => {
@@ -35,11 +20,13 @@ const App = () => {
     loadContent();
   }, []);
 
-  const toggleWidgetVisibility = (widgetName) => {
-    setWidgetVisibility({
-      ...widgetVisibility,
-      [widgetName]: !widgetVisibility[widgetName],
-    });
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+    localStorage.setItem("darkMode", isDarkMode);
+  }, [isDarkMode]);
+
+  const handleThemeToggle = (checked) => {
+    setIsDarkMode(checked);
   };
 
   if (isLoading) {
@@ -48,18 +35,15 @@ const App = () => {
 
   return (
     <div id="notice-board">
-      <div className="widget-controls">
-        <h2>Widget Controls</h2>
-        {Object.keys(widgetVisibility).map((widgetName) => (
-          <button
-            key={widgetName}
-            onClick={() => toggleWidgetVisibility(widgetName)}
-          >
-            {widgetName.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-          </button>
-        ))}
+      <div className="dark-mode-toggle">
+        <DarkModeSwitch
+          onChange={handleThemeToggle}
+          checked={isDarkMode}
+          size={30}
+          style={{ position: 'fixed', top: 20, right: 25 }}
+        />
       </div>
-      <WidgetSlider widgetVisibility={widgetVisibility} />
+      <WidgetSlider />
     </div>
   );
 };
