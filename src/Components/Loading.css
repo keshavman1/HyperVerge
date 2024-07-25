@@ -1,0 +1,15 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5; /* Adjust as needed */
+  }
+  
+  .loading-container h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333; /* Adjust as needed */
+  }
+  
