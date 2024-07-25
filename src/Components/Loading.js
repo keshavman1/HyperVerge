@@ -20,13 +20,13 @@ const Loading = () => {
   }, []);
 
   if (!animationData) {
-    return <div>Loading...</div>;
+    return <div> </div>;
   }
 
   return (
     <div className="loading-container">
       <Lottie animationData={animationData} loop={true} />
-      <h1>Hyperverge Digital Notice Board</h1>
+      
     </div>
   );
 };

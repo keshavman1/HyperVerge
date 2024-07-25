@@ -1,4 +1,3 @@
-/* Basic resets and root variables */
 *,
 *::before,
 *::after {
@@ -71,7 +70,6 @@ body {
   --text-color: #ffffff; /* Text color for dark mode */
 }
 
-/* Body in both themes */
 body {
   background: var(--bg);
   color: var(--text-color); /* Use the text color variable */
@@ -85,18 +83,12 @@ body {
   position: relative; /* Ensure positioning is relative for the theme toggle */
 }
 
-/* Centering the Slider Container */
 .slider-container {
   flex: 1; /* Takes up remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg);
-  padding: 20px;
-  transition: background-color 0.3s ease;
 }
-
-/* Dark Mode Toggle Button */
 .dark-mode-toggle {
   position: fixed;
   top: 10px;
@@ -104,10 +96,29 @@ body {
   z-index: 1000; /* Ensure it appears above other content */
 }
 
-/* Widget Suite Heading */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+
+.widget-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center-aligns the controls horizontally */
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid #ddd; /* Consider removing this if you want no separation */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
 .widget-suite-heading {
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--text-light);
   font-size: 2.4rem; /* Adjust font size as needed */
   transition: color 0.3s ease; /* Smooth transition for color change */
   margin-bottom: 20px; /* Space below heading */
@@ -118,28 +129,16 @@ body {
   color: var(--primary-light); /* Lighter color on hover */
 }
 
-/* Widget Controls */
-.widget-controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center-aligns the controls horizontally */
-  align-items: center;
-  padding: 20px;
-  background-color: var(--bg);
-  border-bottom: 1px solid var(--text-color); /* Border color changes based on theme */
-  box-sizing: border-box;
-  transition: background-color 0.3s ease;
-}
-
+/* Ensure the button is visible and styled */
 .widget-controls button {
   box-shadow: none;
   text-transform: none;
   font-size: 1.2rem;
   padding: 10px 12px;
-  border: 1px solid var(--primary);
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: var(--white);
+  border: 1px solid #0063cc;
+  background-color: #0063cc;
+  border-color: #0063cc;
+  color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 5px;
   border-radius: 8px;
@@ -149,15 +148,15 @@ body {
 }
 
 .widget-controls button:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background-color: #0056b3;
+  border-color: #004080;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
 }
 
 .widget-controls button:active {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background-color: #004080;
+  border-color: #003366;
   box-shadow: none;
 }
 
@@ -166,32 +165,31 @@ body {
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
 
+
 /* Slider Styles */
 .WidgetSlider {
   flex: 1; /* Takes up remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg);
+  background-color: var(--bg-light);
   box-sizing: border-box;
   padding: 20px;
   transition: background-color 0.3s ease;
-  width: 100%; /* Ensure it takes full width */
-  max-width: 1200px; /* Optional: limits the maximum width */
-  margin: 0 auto; /* Center the slider horizontally */
 }
 
 .slider-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid with larger min width */
-  gap: 20px; /* Increase gap between items */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 10px;
   width: 100%;
+  max-width: 1200px; /* Optional: limits the maximum width */
   box-sizing: border-box;
 }
 
 .slider-item {
-  background-color: var(--bg-light);
-  border: 1px solid var(--text-color);
+  background-color: #eee;
+  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   box-sizing: border-box;
@@ -199,26 +197,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem; /* Increased font size for better readability */
+  font-size: 1.4rem; /* Adjusted font size for better readability */
 }
 
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: 1.5rem; /* Increased width for better visibility */
+  width: 1.3rem;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
-  background: var(--text-color);
+  background: #797979;
   transition: all 1s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-light);
+  background: #222224;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: #f9f9f9;
 }
 
 /* Swiper Styles */
@@ -226,8 +224,6 @@ body {
   height: 60rem; /* Reduced height */
   padding: 2rem 0;
   position: relative;
-  display: flex;
-  justify-content: center; /* Center swiper container horizontally */
 }
 
 .swiper-slide {
@@ -303,7 +299,7 @@ body {
 
 .slider-controler .slider-arrow ion-icon {
   font-size: 2rem;
-  color: var(--text-color);
+  color: #222224;
 }
 
 .slider-controler .slider-arrow::after {

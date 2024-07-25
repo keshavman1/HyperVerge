@@ -40,7 +40,7 @@ const App = () => {
           onChange={handleThemeToggle}
           checked={isDarkMode}
           size={30}
-          style={{ position: 'fixed', top: 20, right: 25 }}
+          style={{ position: 'fixed', top: 25, right: 25 }}
         />
       </div>
       <WidgetSlider />
