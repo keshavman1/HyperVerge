@@ -4,8 +4,8 @@
   align-items: center;
   background-color: #f9f9f9;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 30px; /* Increased padding */
   margin: 20px;
   transition: transform 0.3s ease;
 }
@@ -14,15 +14,10 @@
   transform: scale(1.05);
 }
 
-.widget-large {
-  width: 100%;
-  max-width: 600px;
-}
-
 .widget.pomodoro {
   width: 100%;
-  max-width: 800px; /* Increased size */
-  height: 400px; /* Increased height */
+  max-width: 800px; /* Increased max-width */
+  height: 500px; /* Increased height */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +25,7 @@
 }
 
 #timer-display {
-  font-size: 4rem; /* Larger font size */
+  font-size: 5rem; /* Larger font size */
   color: #333;
   margin: 20px 0;
   font-weight: bold;
@@ -40,11 +35,12 @@ button {
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 12px 24px; /* Increased padding */
+  padding: 15px 30px; /* Increased padding */
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 8px; /* More rounded corners */
   cursor: pointer;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  font-size: 1.2rem; /* Larger font size */
 }
 
 button:hover {
@@ -52,5 +48,5 @@ button:hover {
 }
 
 button:active {
-  transform: translateY(2px);
+  transform: scale(0.95); /* Slightly reduce size on click */
 }

@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 
 const PomodoroTimer = () => {
-  const [time, setTime] = useState(25 * 60); 
+  const [time, setTime] = useState(25 * 60);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -29,14 +28,14 @@ const PomodoroTimer = () => {
 
   const resetTimer = () => {
     setIsActive(false);
-    setTime(25 * 60); 
+    setTime(25 * 60);
   };
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
 
   return (
-    <div className="widget">
+    <div className="widget pomodoro">
       <h2>Pomodoro Timer</h2>
       <div id="timer-display">
         {minutes < 10 ? `0${minutes}` : minutes}:{seconds < 10 ? `0${seconds}` : seconds}

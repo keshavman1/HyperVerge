@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import WidgetSlider from "./Components/WidgetSlider";
 import Loading from "./Components/Loading";
-import { DarkModeSwitch } from "./Components/DarkModeSwitch"; // Update this path based on the actual location
+import { DarkModeSwitch } from "./Components/DarkModeSwitch";
 import "./styles.css";
 
 const App = () => {
@@ -9,10 +9,10 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem("darkMode") === "true"
   );
+  const [showAnimation, setShowAnimation] = useState(false);
 
   useEffect(() => {
     const loadContent = async () => {
-      // Simulate a delay for loading. Adjust as needed.
       await new Promise(resolve => setTimeout(resolve, 3000));
       setIsLoading(false);
     };
@@ -23,10 +23,25 @@ const App = () => {
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", isDarkMode ? "dark" : "light");
     localStorage.setItem("darkMode", isDarkMode);
+
+    // Trigger animation on theme change
+    if (isDarkMode) {
+      setShowAnimation(true);
+      const timer = setTimeout(() => setShowAnimation(false), 4000); // Duration of the animation
+      return () => clearTimeout(timer);
+    }
   }, [isDarkMode]);
 
   const handleThemeToggle = (checked) => {
     setIsDarkMode(checked);
+  };
+
+  const createStarElements = () => {
+    let elements = [];
+    for (let i = 1; i <= 100; i++) {
+      elements.push(<div className="star" key={i}></div>);
+    }
+    return elements;
   };
 
   if (isLoading) {
@@ -43,7 +58,9 @@ const App = () => {
           style={{ position: 'fixed', top: 25, right: 25 }}
         />
       </div>
-      <WidgetSlider />
+      <h1 className="app-heading">HYPERLINK BULLETIN</h1>
+      <WidgetSlider isDarkMode={isDarkMode} />
+      {showAnimation && <div className="starfield">{createStarElements()}</div>}
     </div>
   );
 };
